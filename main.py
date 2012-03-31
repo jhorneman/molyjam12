@@ -4,7 +4,7 @@ from flask import Flask, session, redirect, url_for, escape, request, render_tem
 import sqlite3
 from contextlib import closing
 import logging
-from data import load_data, scenes, scene_files
+from data import load_data, scenes, scene_files, warnings
 
 app = Flask(__name__)
 app.config.from_object('molyjam_default_settings')
@@ -55,6 +55,7 @@ def get_user():
         new_user.name = "Untraceable One"
         return new_user
 
+
 @app.route("/", methods=['GET', 'POST'])
 def index():
     if 'userid' in session:
@@ -74,24 +75,32 @@ def index():
     else:
         return render_template('register.html')
 
+
 @app.route('/logout')
 def logout():
     # remove the user ID from the session if its there
     session.pop('userid', None)
     return redirect(url_for('index'))
 
+
 @app.route("/scene/")
 @app.route("/scene/<scene_name>")
 def scene(scene_name='start'):
     user = get_user()
 #    relative_scene_image_path = url_for('static', filename='scene-images/')
-    return render_template('scene.html', scene=scenes[scene_name], user=user)
+    if scenes.has_key(scene_name):
+        return render_template('scene.html', scene=scenes[scene_name], user=user)
+    else:
+        return render_template('scene_not_found.html', user=user)
+
+
+@app.route("/status")
+def status():
+    user = get_user()
+    return render_template('status.html', user=user, warnings=warnings)
 
 
 if __name__ == "__main__":
-    success = load_data()
+    success = load_data(app.logger)
     if success:
-        app.logger.log(logging.DEBUG, "Successfully loaded data")
         app.run(extra_files=scene_files, port=app.config['PORT_NR'])
-    else:
-        app.logger.log(logging.CRITICAL, "Could not load data - aborting")

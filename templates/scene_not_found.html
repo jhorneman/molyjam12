@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block content %}
+<p>Hello {{ user.name }}. You have {{ user.sparkle }} Sparkle. <a href="{{ url_for('logout') }}">Log out</a>.</p>
+<h1>Scene not found</h1>
+<p>Something went wrong. We apologize for the inconvenience.</p>
+{% endblock %}

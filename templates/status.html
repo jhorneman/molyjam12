@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Warnings:</h1>
+<p>
+{% if warnings|length %}
+{% for warning in warnings %}
+{{ warning }}<br/>
+{% endfor %}
+{% else %}
+None.<br/>
+{% endif %}
+</p>
+{% endblock %}
