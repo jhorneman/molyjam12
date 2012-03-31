@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+{% autoescape false %}
+{{ description }}
+{% endautoescape %}
+<ul>
+{% for option in options %}
+    <li><a href="{{ url_for('scene', scene_name=option[0]) }}">{{option[1]}}</a></li>
+{% endfor %}
+</ul>
+{% endblock %}

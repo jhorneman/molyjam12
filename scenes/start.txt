@@ -1,0 +1,4 @@
+It's the start of the story!
+------
+[second]Click here to see the next scene
+[third]OMG it's so exciting!
