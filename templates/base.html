@@ -1,77 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
     <meta charset="utf-8">
-    <title>Bootstrap, from Twitter</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Coin of Destiny</title>
+    <meta name="description" content="A Choose Your Own Adventure game for Molyjam 2012">
+    <meta name="author" content="Jurie Horneman, Andrea Schmoll, David Calvo">
 
-    <!-- Le styles -->
-    <link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet">
-    <style>
-      body {
-        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
-      }
-    </style>
-    <link href="{{ url_for('static', filename='css/bootstrap-responsive.css') }}" rel="stylesheet">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <script src="js/libs/modernizr-2.5.3.min.js"></script>
+</head>
+<body>
+<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 
-    <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="{{ url_for('static', filename='ico/favicon.ico') }}">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ url_for('static', filename='ico/apple-touch-icon-114-precomposed.png') }}">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ url_for('static', filename='ico/apple-touch-icon-72-precomposed.png') }}">
-    <link rel="apple-touch-icon-precomposed" href="{{ url_for('static', filename='ico/apple-touch-icon-57-precomposed.png') }}">
-  </head>
+<header>
 
-  <body>
+</header>
 
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="#">Project name</a>
-          <div class="nav-collapse">
-            <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-
+<div role="main">
 {% block content %}{% endblock %}
+</div>
 
-    </div> <!-- /container -->
+<footer>
 
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/bootstrap-transition.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/bootstrap-alert.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/bootstrap-modal.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/bootstrap-dropdown.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/bootstrap-scrollspy.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/bootstrap-tab.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/bootstrap-tooltip.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/bootstrap-popover.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/bootstrap-button.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/bootstrap-collapse.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/bootstrap-carousel.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/bootstrap-typeahead.js') }}"></script>
+</footer>
 
-  </body>
-</html>
+<script src="js/plugins.js"></script>
+<script src="js/script.js"></script>
+
+</body>
