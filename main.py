@@ -57,7 +57,7 @@ if __name__ == "__main__":
     # Production mode
     elif sys.argv[1] == "production":
         # Get port number from Heroku environment variable
-        app.config['PORT_NR'] = os.environ['PORT']
+        app.config['PORT_NR'] = int(os.environ['PORT'])
         app.debug = False
         host = '0.0.0.0'
 
