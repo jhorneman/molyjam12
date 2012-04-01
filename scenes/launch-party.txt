@@ -1,0 +1,19 @@
+# Launch Party
+
+Awesome! A party! Maybe someone here knows how to get to space!
+Pick me up! Pick me up from this stupid bowl! Take me! You there, in the funny car, with the funny girl, get me! You, in the crazy giant balloon! Or you with the... errr... giant cheese ?
+
+=== SCENE OPTIONS ===
+[crows-nest]
+text = Up goes the balloon! So close to the sky it can almost be touched.
+Attracted by the sparkling coin, the crow 
+approaches the balloon and grabs the coin
+out of a tourist's hand. It flies of in the distance, a rich bird, indeed.
+
+[nasa-headquarters]
+text = Go, Speedracer, go !
+Sometimes, even an astronaut can be lost in the middle of nowhere, like Boulanges-les-Eaux or Mars. But the world is well made, and at the dawn of the 21st century, one payphone still exists. This one.
+
+[birthday-party]
+text = Roll the nut cheese wheel down the hill! Stupid game !
+After rolling for hours, the cheese is melted enough under the sun to participate in a great fondue ! And what better place than a birthday party for this ?

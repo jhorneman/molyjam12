@@ -1,0 +1,16 @@
+# Birthday Party
+
+What now? A goddamn birthday cake, noise, toddlers and crazy football moms. I hate kids. I hate people. Hopefully, nobody can see me... Harpo the magician is an amazing entertainer! I've been in his hand all along! What is he going to do ? The ol' coin in ear trick, improve his routine or get even more drunk?
+
+=== SCENE OPTIONS ===
+[piggy-bank]
+text = Oh, the old coin-behind-the-ear trick! Neat!
+Excited about the magic trick and the shiny coin, Michael takes his new friend to his room and puts it in his piggy bank. What a glorious idea! Michael is gonna be rich one day!
+
+[juke-box]
+text = Westvleteren 12 from Belgium sounds like a really good choice.
+Mr. Sheldon, a regular guest at the bar, grabs a few coins to pick one of his favorite songs on the old, dusty, crummy and blinking juke box whining in the corner. In goes the coin!
+
+[science-fair]
+text = Eager to find out how far up a coin can get stuck in a nose?
+Dr. Crane, the pediatrician, has rescued quite a few coins from children's noses in his lifetime. He brings some of them to the science fair to show the students new types of "mucosities".

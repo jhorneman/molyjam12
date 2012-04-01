@@ -4,3 +4,14 @@ Get off me! Get off me you damn bird! I was so close to getting into space!
 Now I'm sharing this cloudy sky with damn birds. Ah crap! I hate you, birds, squirrels, and what's that, a lumberjack? That's it, savage, kill us all, you don't care, you and your stupid shirt! What is this, Canada?
 
 === SCENE OPTIONS ===
+[science-fair]
+text = Hey, Mister ! Look, I'm shiny, I'm good to eat! Come closer !
+Chester, of AA fame, wants to try out his new metal detector. This coin he has just found is shining in all its glory. Could it be some kind of asteroid ? Quick, to the Science fair !
+
+[party-shop]
+text = He's a lumberjack and he's... cutting down this tree. Brilliant.
+Roger Prankston, of Dorchester, is looking forward to prank his fellow fisherman Barney Victim. Oh oh. The prank was cheaper than he'd thought.
+
+[juke-box]
+text = Oh, thy cloud spirit, pick me up, to the sky and beyond !
+Sometimes, when humidity is too high, the Cloud Spirit manifests, just to put a found coin in the juke box and listen to her favorite song. And cry.

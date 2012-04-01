@@ -1,25 +1,45 @@
 # Piggy Bank
 
-What... what is going on here? The walls are shaking, that horrible sound! Light! There's light! Ah, finally! Freedom! Mathilde has freed me from being trapped in Theodore's entrails! I can start my journey! Space is where I belong! Space is where I can finally shine!
+What... what is going on here? The walls are shaking, that horrible sound! Light! There's light! Ah, finally! Freedom! Mathilde has freed me from being trapped in the piggy bank's entrails! I can start my journey! Space is where I belong! Space is where I can finally shine!
 
 === SCENE OPTIONS ===
-[science_fair]
-text = Science fair
+[science-fair]
+text = You're a science buff! You can grab 1st prize at the fair! Go girl!
+Intrigued by the science experiment "The 
+Vibrating Coin", Mathilde is collecting coins and
+supplies to present her experiement at the fair.
 
-[science_fair]
-text = Birthday party
+[birthday-party]
+text = Yay, birthday party! There will be a clown, there will be games and some awesome cake!
+Michael has invited Mathilde over to his place
+because he is celebrating his 8th birthday. There will be
+a clown!
 
-[science_fair]
-text = Party shop
+[party-shop]
+text = Isn't it hilarious when your friend sits down on a whoopie cushion?
+Mathilde always enjoyed playing pranks on her friends and parents.
 
-[science_fair]
-text = Morgue
+[morgue]
+text = Jawbreakers are the best candy out there! If your jaw can't take them, you're too weak!
+Gary, Mathilde's older brother, works at
+the morgue where they have one of those 
+chewing gum dispensers with jawbreakers. Mathilde loves those!
 
-[science_fair]
-text = Crow's nest
+[crows-nest]
+text = "The Vanilla Bean" has the best organic ice cream in town. The caramel-toffee one is to die for!
+Just when Mathilde had picked her favorite ice-cream
+flavors one of the crows in the tree swoops down
+and snatches the shiny coin.
 
-[science_fair]
-text = Launch party
+[launch-party]
+text = "The Sparkle" is a new energy drink! Attend the mind-blowing launch party!
+Mathilde's mother organizes events at their place.
+This time she's organizing a really big one - the launch of a brand new energy drink!
 
-[science_fair]
-text = Juke box
+[juke-box]
+text = You've got rhythm! You've got music! Pick your favorite song!
+Mathilde loves to pick a song from the
+old juke box. Once in a while, her parents
+take her to the wharf where she can 
+play the juke box.
+

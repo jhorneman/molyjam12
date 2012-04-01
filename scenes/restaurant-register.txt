@@ -1,0 +1,6 @@
+# Cash Register
+
+Unless another astronaut comes by and grabs some food before his launch, you're stuck here in a cash register with a lot of other coins, that will never be stars.
+
+=== SCENE OPTIONS ===
+[game-over]

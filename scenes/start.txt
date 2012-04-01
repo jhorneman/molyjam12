@@ -4,6 +4,8 @@
 
 By <a href="http://twitter.com/PeterMolydeux" target="_blank">Peter Molydeux</a>.
 
+You are a coin. But deep in your heart, you know you are a STAR. Can you make it into space?
+
 === SCENE OPTIONS ===
-[start_andy]
-text = Start Andy's storyline
+[piggy-bank]
+text = Start the adventure!

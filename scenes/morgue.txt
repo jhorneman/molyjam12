@@ -3,3 +3,14 @@
 Nice, a dead people's home. The intern looks bored, leaning on a purple chewing-gum dispenser. All I wanted was go into space and now I'm about to cover some person's eyes because of some weird superstition. As if anyone's going to pay Charon with me for crossing Styx. Ridiculous.
 
 === SCENE OPTIONS ===
+[hell]
+text = Charon, come on, I'm a good coin! I'm not retired yet !
+On the other side of life, the deceased finds himself in Tartarus, to endure eternal pain and suffering (and some sex too). Charon lets the deceased pass the Styx. 
+
+[birthday-party]
+text = How about a jawbreaker, sonny boy ?
+Harpo, the entertainer, knows about the broken bubble gum dispenser and uses the money to stock up on magic tricks and pranks. FAKER !
+
+[party-shop]
+text = You and I want to get out of here, so get moving, son!
+The morgue is not the right place to be. Never. ever. Alive or dead. Any fortune teller will hopefully be able to tell the intern which career his future holds.

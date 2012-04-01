@@ -1,0 +1,13 @@
+# Jukebox
+
+I guess this is it. Ending up in a stupid jukebox with a bunch of stupid, sissy songs. I hate music. I hate nostalgia. What kind of lost soul will my choice of music attract ? Pick a country song and I will intentionally miss the coin slot. I swear.
+
+=== SCENE OPTIONS ===
+[kate-bush]
+text = Kate Bush - Running up that Hill
+
+[elo]
+text = ELO - Mr. Blue Sky
+
+[man-or-astroman]
+text = MoAM ? - a simple text file
