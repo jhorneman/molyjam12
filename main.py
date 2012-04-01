@@ -2,96 +2,33 @@ import sys
 
 __author__ = 'jhorneman'
 
-from flask import Flask, session, redirect, url_for, escape, request, render_template, g
-import sqlite3
-from contextlib import closing
+from flask import Flask, session, redirect, url_for, request, render_template, g
 from data import load_data, scenes, scene_files, warnings
 
+default_sparkle = 50
 
 app = Flask(__name__)
 app.config.from_object('molyjam_default_settings')
-#app.config.from_envvar('MOLYJAM_SETTINGS')
 
 
-def init_db():
-    with closing(connect_db()) as db:
-        with app.open_resource('schema.sql') as f:
-            db.cursor().executescript(f.read())
-        db.commit()
-
-def query_db(query, args=(), one=False):
-    cur = g.db.execute(query, args)
-    rv = [dict((cur.description[idx][0], value) for idx, value in enumerate(row)) for row in cur.fetchall()]
-    return (rv[0] if rv else None) if one else rv
-
-def connect_db():
-    return sqlite3.connect(app.config['DATABASE_PATH'])
-
-@app.before_request
-def before_request():
-    g.db = connect_db()
-
-@app.teardown_request
-def teardown_request(exception):
-    if hasattr(g, 'db'):
-        g.db.close()
-
+# (for convenience)
 class User(object):
     def __init__(self):
-        self.name = "Unknown One"
-        self.sparkle = 0
-
-    @staticmethod
-    def from_id(_user_id):
-        new_user = User()
-        db_data = query_db('select * from users where id = ?', [session['userid']], one=True)
-        if db_data:
-            new_user.name = db_data['name']
-            new_user.sparkle = db_data['sparkle']
-        return new_user
+        self.sparkle = default_sparkle
 
 
-def get_user():
-    if 'userid' in session:
-        return User.from_id(session['userid'])
-    else:
-        new_user = User()
-        new_user.name = "Untraceable One"
-        return new_user
-
-
-@app.route("/", methods=['GET', 'POST'])
+@app.route("/")
 def index():
-    if 'userid' in session:
-        return redirect(url_for('scene'))
-
-    if request.method == 'POST':
-        user = query_db('select * from users where name = ?', [request.form['username']], one=True)
-        if user is None:
-            g.db.execute("insert into users (name, sparkle) values (?, ?)", (request.form['username'], 50))
-            g.db.commit()
-            #TODO: Find a nicer way of doing this
-            user = query_db('select * from users where name = ?', [request.form['username']], one=True)
-            session['userid'] = user['id']
-        else:
-            session['userid'] = user['id']
-        return redirect(url_for('index'))
-    else:
-        return render_template('register.html')
-
-
-@app.route('/logout')
-def logout():
-    # remove the user ID from the session if its there
-    session.pop('userid', None)
-    return redirect(url_for('index'))
+    return redirect(url_for('scene'))
 
 
 @app.route("/scene/")
 @app.route("/scene/<scene_name>")
 def scene(scene_name='start'):
-    user = get_user()
-#    relative_scene_image_path = url_for('static', filename='scene-images/')
+    user = User()
+    if 'user_sparkle' in session:
+        user.sparkle = session["user_sparkle"]
+
     if scenes.has_key(scene_name):
         return render_template('scene.html', scene=scenes[scene_name], user=user)
     else:
