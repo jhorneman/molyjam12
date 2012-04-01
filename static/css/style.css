@@ -167,6 +167,16 @@ section h1 {
     margin-bottom: 0em;
 }
 
+footer h3 a:visited, footer h3 a {
+    text-decoration:none;
+    color: white;
+}
+
+footer h3 a:hover{
+    text-decoration:underline;
+    color: white;
+}
+
 /* =============================================================================
    Media Queries
    ========================================================================== */

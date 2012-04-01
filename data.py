@@ -16,11 +16,24 @@ scene_files = []
 warnings = []
 
 
+def get_trans_option(_current_scene_name, _previous_scene_name):
+    if not scenes.has_key(_previous_scene_name):
+        return None
+
+    previous_scene = scenes[_previous_scene_name]
+    for option in previous_scene.options:
+        if option.next_scene_name == _current_scene_name:
+            return option
+    return None
+
+
 class Option(object):
     def __init__(self):
         self.next_scene_name = ""
+        self.header = ""
         self.text = ""
-        self.sparkle_bonus = 0
+        self.trans_text = ""
+        self.sparkle_delta = 0
         self.min_sparkle = 0
 
 
@@ -40,7 +53,7 @@ class Scene(object):
         # Find the start of the options and parse them
         new_option = None
         if scene_options_marker in d:
-            description, options = d.split(scene_options_marker)
+            scene_text, options = d.split(scene_options_marker)
             for line in options.splitlines():
                 line = line.strip()
                 if len(line):
@@ -65,19 +78,28 @@ class Scene(object):
                                 warnings.append(warning)
                                 _main_logger.log(logging.WARNING, warning)
                         else:
-                            warning = "Could not parse option '%s' of scene '%s'" % (line, _scene_name)
-                            warnings.append(warning)
-                            _main_logger.log(logging.WARNING, warning)
+                            if "=" in line:
+                                warning = "Could not parse option '%s' of scene '%s'" % (line, _scene_name)
+                                warnings.append(warning)
+                                _main_logger.log(logging.WARNING, warning)
+                            else:
+                                new_option.trans_text += line
         else:
             warning = "Could not find options in scene '%s'" % _scene_name
             warnings.append(warning)
             _main_logger.log(logging.WARNING, warning)
-            description = d
+            scene_text = d
         if new_option:
             new_scene.options.append(new_option)
 
         # Convert the text from Markdown to HTML
-        new_scene.description = markdown.markdown(description)
+        html = markdown.markdown(scene_text)
+        if "</h1>" in html:
+            header, description = html.split("</h1>")
+            new_scene.header = header + "</h1>"
+            new_scene.text = description
+        else:
+            new_scene.text = html
 
         return new_scene
 

@@ -1,5 +1,8 @@
-COIN OF DESTINY!!
-=================
+# COIN OF DESTINY!
+
+> Game where you are a coin being passed around. Must travel as far as possible, placing yourself in ideal places to be picked up and transported
+
+By <a href="http://twitter.com/PeterMolydeux" target="_blank">Peter Molydeux</a>.
 
 === SCENE OPTIONS ===
 [start_andy]

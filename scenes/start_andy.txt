@@ -13,3 +13,4 @@ text = Let's have some ice cream!
 
 [hot-dog-stand]
 text = Look at those yummy hot dogs!
+I like hot dogs.

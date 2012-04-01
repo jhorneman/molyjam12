@@ -2,13 +2,31 @@
 {% block content %}
 <section>
     {% autoescape false %}
-    {{ scene.description }}
+    {% if scene.header %}
+    {{ scene.header }}
+    {% endif %}
+    {% if trans_text %}
+    {{ trans_text }}
+    {% endif %}
+    {{ scene.text }}
     {% endautoescape %}
+    {% if user.sparkle > 0 %}
     <p>You have {{ user.sparkle }} Sparkle.</p>
     <ul>
         {% for option in scene.options %}
+        {% if option.min_sparkle <= user.sparkle %}
         <li><a href="{{ url_for('scene', scene_name=option.next_scene_name) }}">{{option.text}}</a></li>
+        {% endif %}
         {% endfor %}
     </ul>
+    {% else %}
+    <div id="game_over">
+        <p >My sparkle is gone... I am just a lump of metal... Why did I ever think I could be a star?...</p>
+        <h1>Game Over</h1>
+        <ul>
+            <li><a href="{{ url_for('restart') }}">Try Again</a></li>
+        </ul>
+    </div>
+    {% endif %}
 </section>
 {% endblock %}

@@ -5,3 +5,6 @@ sync_to_test.sh
 sync_exclude_list.txt
 .idea/
 .git/
+robots.txt
+requirements.txt
+Procfile

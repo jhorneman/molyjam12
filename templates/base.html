@@ -7,7 +7,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title>Coin of Destiny</title>
+    <title>
+    {% if page_title is defined %}
+    {{ page_title }}
+    {% else %}
+    Coin of Destiny
+    {% endif %}
+    </title>
     <meta name="description" content="A Choose Your Own Adventure game for Molyjam 2012">
     <meta name="author" content="Andrea Schmoll, David Calvo, Jurie Horneman">
 
@@ -36,7 +42,7 @@
 
 <div id="footer-container">
     <footer class="wrapper">
-        <h3>Made by Andrea Schmoll, David Calvo and Jurie Horneman for <a href="http://www.whatwouldmolydeux.com/">#Molyjam12</a>.</h3>
+        <h3>Made by <a href="http://berzerkraccoon.wordpress.com/" target="_blank">Andrea Schmoll</a>, <a href="http://www.morethancoral.org/" target="_blank">David Calvo</a> and <a href="http://www.intelligent-artifice.com/" target="_blank">Jurie Horneman</a> for <a href="http://www.whatwouldmolydeux.com/" target="_blank">#Molyjam12</a>.</h3>
     </footer>
 </div>
 
