@@ -43,22 +43,24 @@ def status():
 
 
 if __name__ == "__main__":
+    app.debug = True
+    host = '127.0.0.1'
+
     # Dev mode
     if (len(sys.argv) == 1) or (len(sys.argv) > 1 and sys.argv[1] == "dev"):
         app.config['PORT_NR'] = 5001
-        app.debug = True
 
     # Test mode
     elif sys.argv[1] == "test":
         app.config['PORT_NR'] = 5000
-        app.debug = True
 
     # Production mode
     elif sys.argv[1] == "production":
         # Get port number from Heroku environment variable
         app.config['PORT_NR'] = os.environ['PORT']
         app.debug = False
+        host = '0.0.0.0'
 
     success = load_data(app.logger)
     if success:
-        app.run(extra_files=scene_files, port=app.config['PORT_NR'])
+        app.run(extra_files=scene_files, port=app.config['PORT_NR'], host=host)
