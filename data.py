@@ -39,9 +39,9 @@ class Option(object):
 
 class Scene(object):
     def __init__(self):
-        self.description = ""
+        self.header = ""
+        self.text = ""
         self.options = []
-        self.image_path = None
 
     @staticmethod
     def from_text_file(_file, _scene_name, _main_logger):
@@ -60,6 +60,7 @@ class Scene(object):
                     r = re.match(r"\[(.*)\]", line)
                     if r:
                         if new_option:
+                            new_option.trans_text = markdown.markdown(new_option.trans_text)
                             new_scene.options.append(new_option)
                         new_option = Option()
                         new_option.next_scene_name = r.group(1)
@@ -83,13 +84,14 @@ class Scene(object):
                                 warnings.append(warning)
                                 _main_logger.log(logging.WARNING, warning)
                             else:
-                                new_option.trans_text += line
+                                new_option.trans_text += line + " "
         else:
             warning = "Could not find options in scene '%s'" % _scene_name
             warnings.append(warning)
             _main_logger.log(logging.WARNING, warning)
             scene_text = d
         if new_option:
+            new_option.trans_text = markdown.markdown(new_option.trans_text)
             new_scene.options.append(new_option)
 
         # Convert the text from Markdown to HTML

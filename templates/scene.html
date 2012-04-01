@@ -11,7 +11,6 @@
     {{ scene.text }}
     {% endautoescape %}
     {% if user.sparkle > 0 %}
-    <p>You have {{ user.sparkle }} Sparkle.</p>
     <ul>
         {% for option in scene.options %}
         {% if option.min_sparkle <= user.sparkle %}
@@ -19,6 +18,7 @@
         {% endif %}
         {% endfor %}
     </ul>
+    <p>You have {{ user.sparkle }} Sparkle.</p>
     {% else %}
     <div id="game_over">
         <p >My sparkle is gone... I am just a lump of metal... Why did I ever think I could be a star?...</p>
