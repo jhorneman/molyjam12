@@ -1,4 +1,5 @@
 import sys
+import os
 
 __author__ = 'jhorneman'
 
@@ -49,10 +50,13 @@ if __name__ == "__main__":
 
     # Test mode
     elif sys.argv[1] == "test":
+        app.config['PORT_NR'] = 5000
         app.debug = True
 
     # Production mode
     elif sys.argv[1] == "production":
+        # Get port number from Heroku environment variable
+        app.config['PORT_NR'] = os.environ['PORT']
         app.debug = False
 
     success = load_data(app.logger)
