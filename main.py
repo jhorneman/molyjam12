@@ -1,3 +1,5 @@
+import sys
+
 __author__ = 'jhorneman'
 
 from flask import Flask, session, redirect, url_for, escape, request, render_template, g
@@ -103,6 +105,19 @@ def status():
 
 
 if __name__ == "__main__":
+    # Dev mode
+    if (len(sys.argv) == 1) or (len(sys.argv) > 1 and sys.argv[1] == "dev"):
+        app.config['PORT_NR'] = 5001
+        app.debug = True
+
+    # Test mode
+    elif sys.argv[1] == "test":
+        app.debug = True
+
+    # Production mode
+    elif sys.argv[1] == "production":
+        app.debug = False
+
     success = load_data(app.logger)
     if success:
         app.run(extra_files=scene_files, port=app.config['PORT_NR'])
