@@ -20,19 +20,7 @@ class User(object):
 
 
 @app.route("/")
-def index():
-    return redirect(url_for('scene'))
-
-
-@app.route("/restart")
-def restart():
-    session["user_sparkle"] = default_sparkle
-    session.pop("previous_scene")
-    return redirect(url_for('scene'))
-
-
-@app.route("/scene/")
-@app.route("/scene/<scene_name>")
+@app.route("/<scene_name>")
 def scene(scene_name='start'):
     user = User()
     if 'user_sparkle' in session:
@@ -54,6 +42,13 @@ def scene(scene_name='start'):
         return render_template('scene.html', scene=scenes[scene_name], trans_text=trans_text, user=user, page_title=page_title)
     else:
         return render_template('scene_not_found.html', user=user, page_title=page_title)
+
+
+@app.route("/restart")
+def restart():
+    session["user_sparkle"] = default_sparkle
+    session.pop("previous_scene")
+    return redirect('/')
 
 
 @app.route("/status")
