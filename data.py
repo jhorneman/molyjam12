@@ -35,17 +35,19 @@ class Option(object):
         self.trans_text = ""
         self.sparkle_delta = 0
         self.min_sparkle = 0
+        self.max_sparkle = 100000
 
 
 class Scene(object):
-    def __init__(self):
+    def __init__(self, _name):
+        self.name = _name
         self.header = ""
         self.text = ""
         self.options = []
 
     @staticmethod
     def from_text_file(_file, _scene_name, _main_logger):
-        new_scene = Scene()
+        new_scene = Scene(_scene_name)
 
         d = _file.read()
         d = d.strip()
@@ -108,6 +110,13 @@ class Scene(object):
 
 def load_data(_main_logger):
     load_scene_descriptions(_main_logger)
+
+    for (scene_name, scene) in scenes.items():
+        for option in scene.options:
+            if not scenes.has_key(option.next_scene_name) and option.next_scene_name != "game-over":
+                warning = "Could not find scene '%s' referenced by an option of scene '%s'" % (option.next_scene_name, scene_name)
+                warnings.append(warning)
+                _main_logger.log(logging.WARNING, warning)
 
     if len(scenes):
         _main_logger.log(logging.DEBUG, "Successfully loaded data")
