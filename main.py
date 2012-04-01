@@ -28,7 +28,7 @@ def index():
 def scene(scene_name='start'):
     user = User()
     if 'user_sparkle' in session:
-        user.sparkle = session["user_sparkle"]
+        user.sparkle = int(session["user_sparkle"])
 
     if scenes.has_key(scene_name):
         return render_template('scene.html', scene=scenes[scene_name], user=user)
