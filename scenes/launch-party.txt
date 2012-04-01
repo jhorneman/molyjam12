@@ -1,18 +1,16 @@
 # Launch Party
 
-Awesome! A party! Maybe someone here knows how to get to space!
-Pick me up! Pick me up from this stupid bowl! Take me! You there, in the funny car, with the funny girl, get me! You, in the crazy giant balloon! Or you with the... errr... giant cheese ?
+Awesome! A party with so many important people attending! Maybe one of them knows how to get into space! Hey, anyone! Look at me, I'm shiny! Pick me up! You there, with the racing leather jacket, pick me up! You, balloon pilot, pick me up! Or you with the... errr... giant cheese wheel?
 
 === SCENE OPTIONS ===
 [crows-nest]
-text = Up goes the balloon! So close to the sky it can almost be touched.
-Attracted by the sparkling coin, the crow 
-approaches the balloon and grabs the coin
+text = Up goes the balloon! Hitch a ride and get closer to the sky. So close, you can almost touch it.
+Attracted by the sparkling coin, the crow approaches the balloon and grabs the coin
 out of a tourist's hand. It flies of in the distance, a rich bird, indeed.
 
 [nasa-headquarters]
 text = Go, Speedracer, go !
-Sometimes, even an astronaut can be lost in the middle of nowhere, like Boulanges-les-Eaux or Mars. But the world is well made, and at the dawn of the 21st century, one payphone still exists. This one.
+The astronaut, having attended the launch party, is stoked to get a ride in a real racecar. Just as they're in the middle of nowhere, the engine dies. As luck has it, the reception is dead as well, but there's a payphone, with which he can call a cab and head back to NASA headquarters.
 
 [birthday-party]
 text = Roll the nut cheese wheel down the hill! Stupid game !

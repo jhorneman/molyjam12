@@ -1,0 +1,9 @@
+# Vending Machine
+
+Shortly before the launch into space, one of the astronauts feels like having a Snickers bar. He still has some of the coins left from when he made the call from the public pay phone. This is how history will remember this day.
+
+
+=== SCENE OPTIONS ===
+[space]
+text = To space!
+

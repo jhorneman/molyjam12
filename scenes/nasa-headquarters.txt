@@ -1,9 +1,9 @@
 # NASA Headquarters
-The new, brightly colored NASA headquarter is shining under the moonlight. Oh, these stars. If only I could shine brighter. I can get there. I know i can. I'm too close. Things are happenings. My astronauts is entering the building. By the power of my money might, i shall direct him. Quick. And no mistake.
+The new, brightly colored NASA headquarter is shining under the moonlight. Oh, these stars. If only I could shine brighter. I can get there. I know I can. I'm so close. Things are happening. The astronaut is entering the building. With all my fiscal might, I shall lure him over. Quick. And no mistake.
 
 === SCENE OPTIONS ===
-[space]
-text = Shortly before the launch, one of the pilots feels like having a Snickers bar. He still has the coins from when he made the call from the public pay phone. This is how History will remember this day.
+[vending-machine]
+text = Grab a Snickers bar at the vending machine!
 
 [scrapbook]
 text = It's one of those cool machines that turns coins into badges!
