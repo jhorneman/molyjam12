@@ -25,25 +25,14 @@
     <script src="{{ url_for('static', filename='js/libs/modernizr-2.5.3.min.js') }}"></script>
 </head>
 <body>
-<div id="header-container">
-    <header class="wrapper clearfix">
-        <h1 id="title">Coin of Destiny</h1>
-    </header>
-</div>
-<div id="main-container">
-    <div id="main" class="wrapper clearfix">
-
-        <article>
-{% block content %}{% endblock %}
-        </article>
-
-    </div> <!-- #main -->
-</div> <!-- #main-container -->
-
-<div id="footer-container">
-    <footer class="wrapper">
-        <h3>Made by <a href="http://berzerkraccoon.wordpress.com/" target="_blank">Andrea Schmoll</a>, <a href="http://www.morethancoral.org/" target="_blank">David Calvo</a> and <a href="http://www.intelligent-artifice.com/" target="_blank">Jurie Horneman</a> for <a href="http://www.whatwouldmolydeux.com/" target="_blank">#Molyjam12</a>.</h3>
-    </footer>
+<div id="page_background_container"></div>
+<div id="centering">
+    {% block content %}{% endblock %}
+    <br/>
+    <br/>
+    <div id="footer">
+        <p>Made by <a href="http://berzerkraccoon.wordpress.com/" target="_blank">Andrea Schmoll</a>, <a href="http://www.morethancoral.org/" target="_blank">David Calvo</a> and <a href="http://www.intelligent-artifice.com/" target="_blank">Jurie Horneman</a> for <a href="http://www.whatwouldmolydeux.com/" target="_blank">#Molyjam12</a>.</p>
+    </div>
 </div>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
