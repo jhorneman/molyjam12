@@ -3,11 +3,13 @@ __author__ = 'jhorneman'
 from flask import Flask, session, redirect, url_for, escape, request, render_template, g
 import sqlite3
 from contextlib import closing
-import logging
 from data import load_data, scenes, scene_files, warnings
+
 
 app = Flask(__name__)
 app.config.from_object('molyjam_default_settings')
+#app.config.from_envvar('MOLYJAM_SETTINGS')
+
 
 def init_db():
     with closing(connect_db()) as db:

@@ -3,14 +3,25 @@ import os
 import os.path
 import markdown
 import logging
+import re
 
 __author__ = 'jhorneman'
 
 SCRIPT_DIR = os.path.abspath(os.path.dirname(sys.argv[0])) + os.sep
 
+scene_options_marker = "=== SCENE OPTIONS ==="
+
 scenes = {}
 scene_files = []
 warnings = []
+
+
+class Option(object):
+    def __init__(self):
+        self.next_scene_name = ""
+        self.text = ""
+        self.sparkle_bonus = 0
+        self.min_sparkle = 0
 
 
 class Scene(object):
@@ -27,27 +38,46 @@ class Scene(object):
         d = d.strip()
 
         # Find the start of the options and parse them
-        if '------' in d:
-            text, options_string = d.split('------')
-            for option_string in options_string.split('['):
-                option_string = option_string.strip()
-                if option_string:
-                    try:
-                        next_scene_name, option_text = option_string.split(']')
-                    except ValueError:
-                        warning = "Could not read option '%s' of scene '%s'" % (option_string, _scene_name)
-                        warnings.append(warning)
-                        _main_logger.log(logging.WARNING, warning)
+        new_option = None
+        if scene_options_marker in d:
+            description, options = d.split(scene_options_marker)
+            for line in options.splitlines():
+                line = line.strip()
+                if len(line):
+                    r = re.match(r"\[(.*)\]", line)
+                    if r:
+                        if new_option:
+                            new_scene.options.append(new_option)
+                        new_option = Option()
+                        new_option.next_scene_name = r.group(1)
                     else:
-                        new_scene.options.append((next_scene_name, option_text))
+                        r =re.match(r"(.*)=(.*)", line)
+                        if r:
+                            parameter_name = r.group(1).rstrip()
+                            parameter_value = r.group(2).lstrip()
+                            if new_option.__dict__.has_key(parameter_name):
+                                if type(new_option.__dict__[parameter_name]) == type(1):
+                                    new_option.__dict__[parameter_name] = int(parameter_value)
+                                else:
+                                    new_option.__dict__[parameter_name] = str(parameter_value)
+                            else:
+                                warning = "Unknown parameter '%s' in scene '%s'" % (parameter_name, _scene_name)
+                                warnings.append(warning)
+                                _main_logger.log(logging.WARNING, warning)
+                        else:
+                            warning = "Could not parse option '%s' of scene '%s'" % (line, _scene_name)
+                            warnings.append(warning)
+                            _main_logger.log(logging.WARNING, warning)
         else:
-            warning = "Could not find options in scene '%s'" % (_scene_name)
+            warning = "Could not find options in scene '%s'" % _scene_name
             warnings.append(warning)
             _main_logger.log(logging.WARNING, warning)
-            text = d
+            description = d
+        if new_option:
+            new_scene.options.append(new_option)
 
         # Convert the text from Markdown to HTML
-        new_scene.description = markdown.markdown(text)
+        new_scene.description = markdown.markdown(description)
 
         return new_scene
 

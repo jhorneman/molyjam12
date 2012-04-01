@@ -6,31 +6,50 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
     <title>Coin of Destiny</title>
     <meta name="description" content="A Choose Your Own Adventure game for Molyjam 2012">
-    <meta name="author" content="Jurie Horneman, Andrea Schmoll, David Calvo">
+    <meta name="author" content="Andrea Schmoll, David Calvo, Jurie Horneman">
 
     <meta name="viewport" content="width=device-width">
+
+    <link href='http://fonts.googleapis.com/css?family=Crimson+Text' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
-    <script src="js/libs/modernizr-2.5.3.min.js"></script>
+    <script src="{{ url_for('static', filename='js/libs/modernizr-2.5.3.min.js') }}"></script>
 </head>
 <body>
-<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+<div id="header-container">
+    <header class="wrapper clearfix">
+        <h1 id="title">Coin of Destiny</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('logout') }}">Log out</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header>
+</div>
+<div id="main-container">
+    <div id="main" class="wrapper clearfix">
 
-<header>
-
-</header>
-
-<div role="main">
+        <article>
 {% block content %}{% endblock %}
+        </article>
+
+    </div> <!-- #main -->
+</div> <!-- #main-container -->
+
+<div id="footer-container">
+    <footer class="wrapper">
+        <h3>Made by Andrea Schmoll, David Calvo and Jurie Horneman for <a href="http://www.whatwouldmolydeux.com/">#Molyjam12</a>.</h3>
+    </footer>
 </div>
 
-<footer>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="{{ url_for('static', filename='js/libs/jquery-1.7.1.min.js') }}"><\/script>')</script>
 
-</footer>
-
-<script src="js/plugins.js"></script>
-<script src="js/script.js"></script>
-
+<script src="{{ url_for('static', filename='js/plugins.js') }}"></script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
+</html>

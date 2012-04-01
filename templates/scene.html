@@ -1,12 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
-<p>Hello {{ user.name }}. You have {{ user.sparkle }} Sparkle. <a href="{{ url_for('logout') }}">Log out</a>.</p>
-{% autoescape false %}
-{{ scene.description }}
-{% endautoescape %}
-<ul>
-{% for option in scene.options %}
-    <li><a href="{{ url_for('scene', scene_name=option[0]) }}">{{option[1]}}</a></li>
-{% endfor %}
-</ul>
+<section>
+    {% autoescape false %}
+    {{ scene.description }}
+    {% endautoescape %}
+    <p>You have {{ user.sparkle }} Sparkle.</p>
+    <ul>
+        {% for option in scene.options %}
+        <li><a href="{{ url_for('scene', scene_name=option.next_scene_name) }}">{{option.text}}</a></li>
+        {% endfor %}
+    </ul>
+</section>
 {% endblock %}

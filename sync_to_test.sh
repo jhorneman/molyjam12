@@ -10,4 +10,4 @@ cd ~/dev/molyjam/dev
 # --delete - delete destination files if they no longer exist at source
 # --exclude-from - exclude a whole bunch of stuff listed in a text file
 
-rsync -avrW --delete --exclude-from 'sync_exclude_list.txt' . ../test/
+rsync -avrW --exclude-from 'sync_exclude_list.txt' . ../test/
