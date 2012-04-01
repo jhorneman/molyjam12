@@ -1,0 +1,18 @@
+# Party Shop
+
+Seriously? I'm at a store that sells party favors, cheap magic tricks and costumes? This is not going well. I'm far from my goal. I'm far from fame, grace, and amazing glory. Outside, a church bell is crushing the silence, a whore looks at us lustily and this crazy fortune teller keeps repeating the same thing:"There's not future, 'til you make it happen." Thanks for the tip, douchebag.
+
+=== SCENE OPTIONS ===
+[crows-nest]
+text = "There's no future, 'til you make it happen."
+If it's sparkly, the crow will make sure to steal it and bring it to its nest.
+
+[science-fair]
+text = Let's cross the road and buy some candles, I need all the luck I can get.
+The local priest pays the Science Fair a visit. While purchasing a soda, he drops a few coins.
+
+[morgue]
+text = Hello my lady, care for a little company ?
+During the day, Felicity works at the morgue.
+During her break she grabs a coffee from the 
+coffee machine and forgets her change in the slot.

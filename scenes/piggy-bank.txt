@@ -1,0 +1,25 @@
+# Piggy Bank
+
+What... what is going on here? The walls are shaking, that horrible sound! Light! There's light! Ah, finally! Freedom! Mathilde has freed me from being trapped in Theodore's entrails! I can start my journey! Space is where I belong! Space is where I can finally shine!
+
+=== SCENE OPTIONS ===
+[science_fair]
+text = Science fair
+
+[science_fair]
+text = Birthday party
+
+[science_fair]
+text = Party shop
+
+[science_fair]
+text = Morgue
+
+[science_fair]
+text = Crow's nest
+
+[science_fair]
+text = Launch party
+
+[science_fair]
+text = Juke box

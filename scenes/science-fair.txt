@@ -1,10 +1,6 @@
-Science Fair
-============
+# Science Fair
 
-Stella is lacking a few coins for her experiment.
-She panics and takes some coins out of her classmates
-pocket. Luckily, she has enough. The experiment wins 1st prize.
+I can't believe Mathilde is using me for this stupid science fair. What kind of 
+experiment is this anyway? A cold bottle, some cold water... I'm freezing! I'm shaking! Look at this place, there are so many places where I could be warmer. Inside this tampon machine, in the cosy library, or even dowstairs, in the sewer, where the rats roam free.
 
 === SCENE OPTIONS ===
-[NASA-headquarters]
-text = Fly me to the moon!
