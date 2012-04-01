@@ -2,20 +2,30 @@
 {% block content %}
 <section>
     {% autoescape false %}
+
     {% if scene.header %}
     {{ scene.header }}
     {% endif %}
+
     {% if trans_text %}
     <div id="trans_text">{{ trans_text }}</div>
     {% endif %}
+
     {{ scene.text }}
+
     {% endautoescape %}
+
     <ul id="options">
         {% for option in scene.options %}
-        {% if option.min_sparkle <= user.sparkle %}
-        <li><a href="{{ url_for('scene', scene_name=option.next_scene_name) }}">&#8220; {{option.text}} &#8221;</a></li>
+
+        {% if option.next_scene_name == "game-over" %}
+        <li class="game-over"><a href="{{ url_for('restart') }}">&#8220;Try Again&#8221;</a></li>
+        {% elif (option.min_sparkle <= user.sparkle) and (user.sparkle <= option.max_sparkle) %}
+        <li><a href="{{ url_for('scene', scene_name=option.next_scene_name) }}">&#8220;{{option.text}}&#8221;</a></li>
         {% endif %}
+
         {% endfor %}
     </ul>
+
 </section>
 {% endblock %}
