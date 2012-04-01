@@ -1,0 +1,8 @@
+Lunch Lady
+==========
+The lunch lady takes a few coins from the register
+to buy some tampons from the vending machine in the toilet.
+
+=== SCENE OPTIONS ===
+[tampon-vending-machine]
+text = Accidents happen

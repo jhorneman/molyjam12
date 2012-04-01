@@ -1,0 +1,10 @@
+Science Fair Disaster
+=====================
+
+When Stella's not looking, one of her classmates
+steals a few coins to buy something to 
+drink from the cafeteria.
+
+=== SCENE OPTIONS ===
+[lunch-lady]
+text = I think I need something to drink.

@@ -1,0 +1,8 @@
+Tampon Vending Machine
+======================
+Julie is bored so she decides to get some coins out
+of the tampon vending machine at the girl's toilet.
+
+=== SCENE OPTIONS ===
+[stolen]
+text = It's for science!

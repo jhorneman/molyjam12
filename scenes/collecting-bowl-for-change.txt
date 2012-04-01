@@ -1,0 +1,11 @@
+Collecting bowl for change
+==========================
+
+His wife empties his pockets before
+she puts everything into the washing machine.
+The spare change goes into a huge bowl filled
+with other spare change and things.
+
+=== SCENE OPTIONS ===
+[science-fair-experiment]
+text = Out of the way, science needs to be done!

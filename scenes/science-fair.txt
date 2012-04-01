@@ -1,0 +1,10 @@
+Science Fair
+============
+
+Stella is lacking a few coins for her experiment.
+She panics and takes some coins out of her classmates
+pocket. Luckily, she has enough. The experiment wins 1st prize.
+
+=== SCENE OPTIONS ===
+[NASA-headquarters]
+text = Fly me to the moon!

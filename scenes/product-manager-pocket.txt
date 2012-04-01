@@ -1,0 +1,11 @@
+Product Manager's Pocket
+========================
+
+At the parking meter he finds out
+that he actually has more coins than required
+and puts the spare change in the back pocket
+of his pants.
+
+=== SCENE OPTIONS ===
+[collecting-bowl-for-change]
+text = Hey fellow coins, how are you doing?

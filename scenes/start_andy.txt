@@ -1,9 +1,15 @@
-**Piggy Bank**
-
+Piggy Bank
+==========
 What... what is going on here? The walls are shaking, that horrible sound! Light! There's light! Ah, finally! Freedom! 
 Mathilde has freed me from being trapped in Theodore's entrails! I can start my journey! 
 Space is where I belong! Space is where I can finally shine!
-------
-[Lemonade Stand]A lemonade stand! I must go there!
-[Ice Cream Cart] Let's have some ice cream!
-[hotdogstand] Look at those yummy hot dogs!
+
+=== SCENE OPTIONS ===
+[lemonade-stand]
+text = A lemonade stand! I must go there!
+
+[ice-cream-cart]
+text = Let's have some ice cream!
+
+[hot-dog-stand]
+text = Look at those yummy hot dogs!

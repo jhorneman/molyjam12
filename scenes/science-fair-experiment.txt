@@ -1,0 +1,10 @@
+Science Fair Experiment
+=======================
+
+Stella, their 14 year old daughter, rummages 
+through the bowl to grab some coins for her science fair
+experiment.
+
+=== SCENE OPTIONS ===
+[science-fair-disaster]
+text = Someone stole my money!

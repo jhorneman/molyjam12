@@ -1,3 +1,6 @@
 COIN OF DESTINY!!
-------
-[start_andy]Start Andy's storyline
+=================
+
+=== SCENE OPTIONS ===
+[start_andy]
+text = Start Andy's storyline
