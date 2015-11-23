@@ -1,0 +1,40 @@
+This document describes the format of the CYOA scene text files.
+
+Scene files should be normal plain text files with a .txt extension.
+The filename should consist of just characters (a-z), number (0-9) and hyphens (-). The filename (without the extension) is the scene's identifier. It's used internally but not seen by the player.
+
+Scene files start with:
+
+# Scene title
+
+(The hash makes this an h1 header in HTML. The transition text from the previous scene is inserted between the header and the rest of the text.)
+
+Then you just write the scene text using plain text / markdown. The most important markdown syntax:
+
+*italics*
+**bold**
+
+See http://daringfireball.net/projects/markdown/basics for more.
+
+After the description you write:
+
+=== SCENE OPTIONS ===
+
+After this, new rules. List options using this format:
+
+[next scene name]
+parameter = value
+parameter = value
+free form transition text
+
+So for example:
+
+[start_andy]
+text = Start Andy's storyline
+min_sparkle = 5
+delta_sparkle = 10
+I entered Andy's storyline. Lots of weird colors!
+
+Would generate a link to the scene "start_andy" (which is described  in start_andy.txt). The link text would be "Start Andy's storyline". The player would need at least 5 sparkle to be able to see the option, and will receive 10 sparkle for choosing it.
+Anything that's not a line like "parameter = value" will be used as transition text on the next page. So you can't use '=' in transition texts...
+Oh and transition texts can use markdown as well.
