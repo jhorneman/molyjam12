@@ -1,8 +1,0 @@
-PR Manager's Purse
-==================
-A PR Manager, on her shopping trip, sees the 
-coin on the floor, picks it up and puts it in her purse. 
-
-=== SCENE OPTIONS ===
-[parking-meter]
-text = Oops, almost ran out of money!
